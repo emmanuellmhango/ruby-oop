@@ -1,4 +1,6 @@
-require './person.rb'
+# frozen_string_literal: true
+
+require './person'
 
 class Student < Person
   def initialize(classroom)
@@ -6,8 +8,7 @@ class Student < Person
     @classroom = classroom
   end
 
-  def play_hooky 
+  def play_hooky
     "¯\(ツ)/¯"
   end
-
 end
