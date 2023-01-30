@@ -9,16 +9,15 @@ class Person
     @parent_permission = parent_permission
   end
 
-  private def is_of_age?
-    return @age > 18
+  private
+
+  def can_use_services?
+    return true if is_of_age? || @parent_permission
+
+    false
   end
 
-  private def can_use_services?
-    if is_of_age? || @parent_permission
-      return true 
-    else
-      return false
-    end
+  def of_age?
+    @age > 18
   end
-
 end
