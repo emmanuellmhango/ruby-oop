@@ -2,7 +2,7 @@ class Person
   attr_accessor :name, :age
   attr_reader :id
 
-  def initilize(age, name = 'Unknown', parent_permission = true)
+  def initilize(age, name = 'Unknown', parent_permission: true)
     @id = rand(1_000_000)
     @name = name
     @age = age
@@ -16,6 +16,7 @@ class Person
   end
 
   private
+  
   def is_of_age?
     @age > 18
   end
