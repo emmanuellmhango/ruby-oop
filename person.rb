@@ -2,7 +2,7 @@ class Person
   attr_accessor :name, :age
   attr_reader :id
 
-  def initilize(name = 'Unknown', age, parent_permission = true)
+  def initilize(age, name = 'Unknown', parent_permission: true)
     @id = nil
     @name = name
     @age = age
