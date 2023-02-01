@@ -1,4 +1,4 @@
-require './decorator.rb'
+require_relative 'decorator'
 
 class TrimmerDecorator < BaseDecorator
   def initialize(person)
