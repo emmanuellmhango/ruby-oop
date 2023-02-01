@@ -2,6 +2,7 @@ require './decorator.rb'
 
 class TrimmerDecorator < BaseDecorator
   def initialize(person)
+    super
     @person = person
   end
 

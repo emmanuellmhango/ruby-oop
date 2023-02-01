@@ -1,8 +1,9 @@
-require './decorator.rb'
+require_relative 'decorator'
 
 class CapitalizeDecorator < BaseDecorator
   def initialize(person)
     @person = person
+    super
   end
 
   def correct_name
