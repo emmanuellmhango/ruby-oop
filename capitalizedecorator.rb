@@ -1,10 +1,6 @@
 require_relative 'decorator'
 
 class CapitalizeDecorator < BaseDecorator
-  def initialize(person)
-    @person = person
-  end
-
   def correct_name
     @person.correct_name.capitalize
   end
