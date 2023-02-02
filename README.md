@@ -1,12 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -32,7 +25,7 @@
 # 📖 [OOP School Library] <a name="about-project"></a>
 
 
-**[OOP School Library]** is a Ruby app used to manage school library books. 
+**[OOP School Library]** is a Ruby app used to manage school library books.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -48,8 +41,6 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[Add new students or teachers]**
 - **[Add new books]**
@@ -105,7 +96,6 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Add Student]**
 - [ ] **[Add Teacher]**
@@ -129,9 +119,8 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project and want to support me add more projects, Give this project a Star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
