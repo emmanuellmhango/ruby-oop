@@ -23,7 +23,7 @@ class Person < Nameable
     @age > 18
   end
 
-  public 
+  public
   
   def correct_name
     @name

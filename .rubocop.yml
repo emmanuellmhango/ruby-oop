@@ -16,9 +16,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
+  IgnoredMethods: ["describe"]
   Max: 30
-
 
 Style/Documentation:
   Enabled: false
@@ -32,6 +31,11 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
