@@ -25,7 +25,7 @@ class Person < Nameable
   end
 
   public
-  
+
   def correct_name
     @name
   end
