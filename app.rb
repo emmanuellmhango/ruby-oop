@@ -33,7 +33,9 @@ class App
     if @people.empty?
       puts 'No people added yet'
     else
-      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+      @people.each do |person|
+        puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
     end
     puts
   end
@@ -71,7 +73,7 @@ class App
     if @people.empty?
       puts 'No people added'
     else
-      @people.each_with_index do |person, index| 
+      @people.each_with_index do |person, index|
         puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
@@ -88,7 +90,9 @@ class App
 
   def list_rentals(id)
     puts
-    @rentals.each { |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id }
+    @rentals.each do |rental|
+      puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id 
+    end
     puts
   end
 end
