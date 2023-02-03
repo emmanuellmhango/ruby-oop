@@ -55,7 +55,7 @@ class Main
   end
 
   def menu
-    while true
+    until false
       options
       choice = gets.chomp.to_i
       case choice
