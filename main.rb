@@ -40,12 +40,25 @@ class Main
     print 'Option: '
   end
 
-  def register_book
+  def reg_book
     print 'Title: '
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
     @app.create_book(title, author)
+  end
+
+  def get_rentals
+    print 'ID of person: '
+    id = gets.chomp.to_i
+    @app.list_rentals(id)
+  end
+
+  def app_exit
+    exit_code = false
+    puts
+    puts 'See you next time!!'
+    puts
   end
 
   def menu
@@ -60,20 +73,15 @@ class Main
       when 2
         @app.list_people
       when 3
-        Register.new.register_people
+        Register.new.reg_people
       when 4
-        register_book
+        reg_book
       when 5
         RentBook.new.rent_book
       when 6
-        print 'ID of person: '
-        id = gets.chomp.to_i
-        @app.list_rentals(id)
+        get_rentals
       when 7
-        exit_code = false
-        puts
-        puts 'See you next time!!'
-        puts
+        app_exit
       else
         puts 'You chose a wrong option, use options 1 to 7'
       end

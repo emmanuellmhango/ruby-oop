@@ -6,8 +6,8 @@ class Register
   def initialize
     @app = App.new
   end
-  
-  def register_people
+
+  def reg_people
     print 'Do you want to create a student (1) or a Teacher (2)? [Input the number]:'
     selection = gets.chomp
     num = selection.to_i
