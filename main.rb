@@ -48,22 +48,14 @@ class Main
     @app.create_book(title, author)
   end
 
-  def get_rentals
+  def getrentals
     print 'ID of person: '
     id = gets.chomp.to_i
     @app.list_rentals(id)
   end
 
-  def app_exit
-    exit_code = false
-    puts
-    puts 'See you next time!!'
-    puts
-  end
-
   def menu
-    exit_code = true
-    while exit_code
+    while true
       options
       input = gets.chomp
       choice = input.to_i
@@ -79,9 +71,10 @@ class Main
       when 5
         RentBook.new.rent_book
       when 6
-        get_rentals
+        getrentals
       when 7
-        app_exit
+        puts 'Thank you for using the app!'
+        break
       else
         puts 'You chose a wrong option, use options 1 to 7'
       end
