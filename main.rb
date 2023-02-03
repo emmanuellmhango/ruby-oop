@@ -1,8 +1,20 @@
 require_relative 'app'
 
-class RentBook
+class Main
   def initialize
     @app = App.new
+  end
+
+  def options
+    puts 'Please choose an option by entering a number'
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
+    print 'Option: '
   end
 
   def rent_book
@@ -19,24 +31,6 @@ class RentBook
     print 'Date: '
     date = gets.chomp
     @app.rent_a_book(date, person_number, book_number)
-  end
-end
-
-class Main
-  def initialize
-    @app = App.new
-  end
-
-  def options
-    puts 'Please choose an option by entering a number'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
-    print 'Option: '
   end
 
   def regstudent
@@ -100,7 +94,7 @@ class Main
     when 4
       reg_book
     when 5
-      RentBook.new.rent_book
+      rent_book
     when 6
       getrentals
     else
