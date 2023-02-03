@@ -20,20 +20,20 @@ class App
 
   def list_books
     puts
-    if @books.length < 1
+    if @books.empty?
       puts 'No books added yet'
     else
-      @books.each {|book| puts "Title: \"#{book.title}\", Author: #{book.author}"}
+      @books.each { |book| puts "Title: \"#{book.title}\", Author: #{book.author}" }
     end
     puts
   end
 
   def list_people
     puts
-    if @people.length < 1
+    if @people.empty?
       puts 'No people added yet'
     else
-      @people.each {|person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"}
+      @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
     end
     puts
   end
@@ -45,7 +45,7 @@ class App
     puts 'Person created successfully'
     puts
   end
-  
+
   def create_teacher(age, name, specialization)
     teacher = Teacher.new(age, specialization, name: name)
     @people.push(teacher)
@@ -56,20 +56,20 @@ class App
 
   def list_books_for_rental
     puts
-    if @books.length < 1
+    if @books.empty?
       puts 'No books added'
     else
-      @books.each_with_index {|book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}"}
+      @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
     end
     puts
   end
 
   def list_people_to_rent_a_book
     puts
-    if @people.length < 1
+    if @people.empty?
       puts 'No people added'
     else
-      @people.each_with_index {|person, index| puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"}
+      @people.each_with_index { |person, index| puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
     end
     puts
   end
@@ -84,7 +84,7 @@ class App
 
   def list_rentals(id)
     puts
-    @rentals.each {|rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id}
+    @rentals.each { |rental| puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id }
     puts
   end
 end
