@@ -57,8 +57,7 @@ class Main
   def menu
     while true
       options
-      input = gets.chomp
-      choice = input.to_i
+      choice = gets.chomp.to_i
       case choice
       when 1
         @app.list_books
