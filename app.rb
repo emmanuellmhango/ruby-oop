@@ -88,4 +88,3 @@ class App
     puts
   end
 end
-
