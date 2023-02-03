@@ -89,28 +89,35 @@ class Main
     @app.list_rentals(id)
   end
 
+  def choiceoptions(choice)
+    case choice
+    when 1
+      @app.list_books
+    when 2
+      @app.list_people
+    when 3
+      reg_people
+    when 4
+      reg_book
+    when 5
+      RentBook.new.rent_book
+    when 6
+      getrentals
+    else
+      puts 'You chose a wrong option, use options 1 to 7'
+    end
+  end
+
   def menu
     loop do
       options
       choice = gets.chomp.to_i
-      case choice
-      when 1
-        @app.list_books
-      when 2
-        @app.list_people
-      when 3
-        reg_people
-      when 4
-        reg_book
-      when 5
-        RentBook.new.rent_book
-      when 6
-        getrentals
-      when 7
+      if choice == 7
         puts 'Thank you for using the app!'
+        puts
         break
       else
-        puts 'You chose a wrong option, use options 1 to 7'
+        choiceoptions(choice)
       end
     end
   end
