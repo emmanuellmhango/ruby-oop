@@ -59,7 +59,9 @@ class App
     if @books.empty?
       puts 'No books added'
     else
-      @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
+      @books.each_with_index do |book, index|
+        puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}"
+      end
     end
     puts
   end
@@ -69,7 +71,9 @@ class App
     if @people.empty?
       puts 'No people added'
     else
-      @people.each_with_index { |person, index| puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+      @people.each_with_index do |person, index| 
+        puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
     end
     puts
   end

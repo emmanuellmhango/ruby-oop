@@ -82,7 +82,7 @@ class Main
         puts
       else
         puts 'You chose a wrong option, use options 1 to 7'
-      end 
+      end
     end
   end
 end
